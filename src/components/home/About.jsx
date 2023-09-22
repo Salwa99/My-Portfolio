@@ -56,8 +56,8 @@ const About = () => {
       </div>
 
 
-      <div className="w-1/2">
-        <img src={image} className="w-[500px] h-[600] " />
+      <div className="w-1/2 flex justify-center items-center">
+        <img src={image} className="w-[600px] h-[600] z-10" alt='banner-pic' />
       </div>
     </section>
   );
