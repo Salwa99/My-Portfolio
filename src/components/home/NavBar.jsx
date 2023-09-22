@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import picture from "../../assets/images/pic.jpeg"
 import {navBarLinks} from "../../data/index"
+import { Link } from "react-scroll";
 
 const NavBar = () => {
 
@@ -55,13 +56,13 @@ const NavBar = () => {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0">
             
-            {navBarLinks.map((links) => (
-              <li>
+            {navBarLinks.map(({_id, title, link}) => (
+              <li key={_id}>
                 <a
                   href="#"
                   className="block py-2 pl-3 pr-4 md:p-0 text-gray-700 hover:underline"
                 >
-                  {links.title}
+                 <Link activeClass="active" to={link} spy={true} offset={-70} duration={500}>{title}</Link> 
                 </a>
               </li>
             ))}

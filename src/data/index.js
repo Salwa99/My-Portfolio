@@ -1,18 +1,18 @@
 export const navBarLinks = [
   {
     _id: 1,
-    title: "Home",
-    link: "home",
-  },
-  {
-    _id: 2,
     title: "About me",
     link: "aboutMe",
   },
   {
+    _id: 2,
+    title: "Services",
+    link: "services",
+  },
+  {
     _id: 3,
-    title: "Skills",
-    link: "skills",
+    title: "Resume",
+    link: "resume",
   },
   {
     _id: 4,
