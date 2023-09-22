@@ -40,10 +40,10 @@ const About = () => {
             />
           </h2>
           <p className="text-base lg:text-lg font-bodyFont text-gray-600 leading-6 tracking-wide">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima hic
-            blanditiis harum. sit amet consectetur, adipisicing elit. Minima hic
-            blanditiis harum. sit amet consectetur, adipisicing elit. Minima hic
-            blanditiis harum.
+            Greetings! I'm a dedicated software engineer who loves turning
+            your ideas into reality. Check out my portfolio for successful
+            projects, and if you have a coding project in mind, reach out! Let's
+            bring your visions to life!
           </p>
         </div>
 
