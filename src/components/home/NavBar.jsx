@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import picture from "../../assets/images/pic.jpeg"
+import {navBarLinks} from "../../data/index"
 
 const NavBar = () => {
 
@@ -9,11 +11,18 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-yellow-400">
+    <nav className="border-gray-200 bg-yellow-400">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-700">
-          Salwa Ballouti
-        </span>
+        <div className="flex items-center gap-4">
+          <img
+            class="w-20 h-20 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+            src={picture}
+            alt="my picture"
+          />
+          <span className=" text-2xl font-semibold dark:text-gray-700">
+            Salwa Ballouti
+          </span>
+        </div>
         <button
           onClick={toggleMenu}
           type="button"
@@ -44,40 +53,19 @@ const NavBar = () => {
           } w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 bg-yellow-400 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-yellow-400 border-2 dark:border-gray-700">
-            <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-500 hover:bg-gray-400 hover:text-yellow-400 hover:rounded-md md:bg-transparent md:p-0"
-                aria-current="page"
-              >
-                About me
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-500 hover:bg-gray-400 hover:text-yellow-400 hover:rounded-md md:bg-transparent md:p-0"
-              >
-                Skills
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-500 hover:bg-gray-400 hover:text-yellow-400 hover:rounded-md md:bg-transparent md:p-0"
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-500 hover:bg-gray-400 hover:text-yellow-400 hover:rounded-md md:bg-transparent md:p-0"
-              >
-                Contact me
-              </a>
-            </li>
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0">
+            
+            {navBarLinks.map((links) => (
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 pl-3 pr-4 md:p-0 text-gray-700 hover:underline"
+                >
+                  {links.title}
+                </a>
+              </li>
+            ))}
+
           </ul>
         </div>
       </div>
