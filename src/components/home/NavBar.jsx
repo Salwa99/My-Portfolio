@@ -9,15 +9,15 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-blue-500">
+    <nav className="bg-white border-gray-200 dark:bg-yellow-400">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-700">
           Salwa Ballouti
         </span>
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500-lg md:hidden focus:outline-none"
           aria-controls="navbar-default"
           aria-expanded={isMenuOpen ? "true" : "false"}
         >
@@ -44,11 +44,11 @@ const NavBar = () => {
           } w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-blue-500 md:dark:bg-blue-500 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 bg-yellow-400 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-yellow-400 border-2 dark:border-gray-700">
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white hover:bg-blue-700 md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"
+                className="block py-2 pl-3 pr-4 text-gray-500 hover:bg-gray-400 hover:text-yellow-400 hover:rounded-md md:bg-transparent md:p-0"
                 aria-current="page"
               >
                 About me
@@ -57,7 +57,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white md:border-0 md:p-0 dark:text-white hover:bg-blue-700"
+                className="block py-2 pl-3 pr-4 text-gray-500 hover:bg-gray-400 hover:text-yellow-400 hover:rounded-md md:bg-transparent md:p-0"
               >
                 Skills
               </a>
@@ -65,7 +65,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white md:border-0 md:p-0 dark:text-white hover:bg-blue-700"
+                className="block py-2 pl-3 pr-4 text-gray-500 hover:bg-gray-400 hover:text-yellow-400 hover:rounded-md md:bg-transparent md:p-0"
               >
                 Projects
               </a>
@@ -73,7 +73,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white md:border-0 md:p-0 dark:text-white hover:bg-blue-700"
+                className="block py-2 pl-3 pr-4 text-gray-500 hover:bg-gray-400 hover:text-yellow-400 hover:rounded-md md:bg-transparent md:p-0"
               >
                 Contact me
               </a>
