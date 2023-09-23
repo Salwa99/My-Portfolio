@@ -3,7 +3,7 @@ import Contact from "./components/home/Contact"
 import Footer from "./components/home/Footer"
 import NavBar from "./components/home/NavBar"
 import Projects from "./components/home/Projects"
-import Services from "./components/home/Services"
+import Services from "./components/Services/Services"
 import Testemonials from "./components/home/Testemonials"
 
 function App() {

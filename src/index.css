@@ -6,7 +6,7 @@
 
 @layer components {
     .icons {
-        @apply w-16 h-16 bg-black bg-opacity-30 text-gray-300 text-xl inline-flex items-center justify-center rounded-md hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-yellow-400 border-yellow-500 border-2 shadow-shadowOne cursor-pointer duration-300;
+        @apply w-16 h-16 bg-black bg-opacity-40 text-gray-200 text-xl inline-flex items-center justify-center rounded-md hover:bg-opacity-50 hover:-translate-y-1 transition-all hover:text-yellow-400 border-yellow-500 border-2 shadow-shadowOne cursor-pointer duration-300;
     }
 }
 
