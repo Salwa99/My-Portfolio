@@ -64,6 +64,7 @@ const About = () => {
             <span className="icons">
               <FaMedium />
             </span>
+            <button className="btn">Get my resume</button>
           </div>
         </div>
       </div>
