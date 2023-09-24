@@ -10,9 +10,9 @@ const Cards = () => {
         {ProjectsData.map((data) => (
           <div
             key={data._id}
-            className="w-full h-auto shadow-shadowOne flex flex-col bg-gradient-to-r from-[#f2f6fa]  to-[#8e9092] group hover:bg-gradient-to-b hover:from-yellow-200 hover:yellow-400 relative overflow-hidden bg-white rounded-lg group transform hover:-translate-y-2 transition-transform duration-300"
+            className="w-full h-auto shadow-shadowOne flex flex-col bg-gradient-to-r from-[#f2f6fa]  to-[#8e9092] group hover:bg-gradient-to-b hover:from-yellow-100 hover:to-yellow-400 hover:border-2 hover:border-yellow-400 relative overflow-hidden bg-white rounded-lg group transform hover:-translate-y-2 transition-transform duration-300"
           >
-            <div className="h-45 lg:h-60 bg-center bg-cover">
+            <div className="h-45 lg:h-70 bg-center bg-cover">
               <img src={data.src} alt="project image" />
             </div>
             <div className="px-6 py-4">

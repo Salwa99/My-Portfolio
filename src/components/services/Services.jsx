@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full py-20 lg:pl-32 pl-3 flex-col border-b-2 border-yellow-400"
+      className="w-full h-auto lg:h-[1200px] py-20 lg:pl-32 pl-3 flex-col border-b-2 border-yellow-400"
     >
       <div className="flex flex-col mb-14 gap-4 font-titleFont">
         <h3 className="text-lg uppercase font-bold text-yellow-500 tracking-wide">
