@@ -16,7 +16,7 @@ const Projects = () => {
         </h2>
       </div>
 
-      <div>
+      <div className="pr-2 lg:pr-20">
         <Cards />
       </div>
     </section>

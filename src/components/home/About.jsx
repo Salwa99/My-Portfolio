@@ -40,10 +40,10 @@ const About = () => {
             />
           </h2>
           <p className="text-base lg:text-lg font-bodyFont text-gray-600 leading-6 tracking-wide">
-            Greetings! I'm a dedicated software engineer who loves turning
-            your ideas into reality. Check out my portfolio for successful
-            projects, and if you have a coding project in mind, reach out! Let's
-            bring your visions to life!
+            Greetings! I'm a dedicated software engineer who loves turning your
+            ideas into reality. Check out my portfolio for successful projects,
+            and if you have a coding project in mind, reach out! Let's bring
+            your visions to life!
           </p>
         </div>
 
@@ -71,7 +71,7 @@ const About = () => {
       <div className="w-full lg:w-1/2 flex justify-center items-center">
         <img
           src={image}
-          className="w-full lg:w-[600px] h-[auto] z-10"
+          className="w-[600px] h-[auto] z-10"
           alt="banner-pic"
         />
       </div>
