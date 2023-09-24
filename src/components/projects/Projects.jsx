@@ -1,5 +1,5 @@
-import React from 'react'
-import Cards from './Cards';
+import React from "react";
+import Cards from "./Cards";
 
 const Projects = () => {
   return (
@@ -16,16 +16,10 @@ const Projects = () => {
         </h2>
       </div>
 
-      <div className="grid grid-rows-3 lg:grid-cols-3 md:grid-cols-2 gap-8 pr-3 lg:pr-20">
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+      <div>
         <Cards />
       </div>
     </section>
   );
-}
-
-export default Projects
+};
+export default Projects;
