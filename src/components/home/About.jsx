@@ -17,6 +17,13 @@ const About = () => {
     delaySpeed: 2000,
   });
 
+   const openResume = () => {
+     window.open(
+       "https://drive.google.com/file/d/1HTvmlZHjhURkVf9MzYfQutBmpWtGfJQB/view?usp=drive_link",
+       "_blank"
+     );
+   };
+
   return (
     <section
       id="aboutMe"
@@ -64,17 +71,15 @@ const About = () => {
             <span className="icons">
               <FaMedium />
             </span>
-            <button className="btn">Get my resume</button>
+            <button className="btn text-sm lg:text-lg " onClick={openResume}>
+              Get my resume
+            </button>
           </div>
         </div>
       </div>
 
       <div className="w-full lg:w-1/2 flex justify-center items-center">
-        <img
-          src={image}
-          className="w-[600px] h-[auto] z-10"
-          alt="banner-pic"
-        />
+        <img src={image} className="w-[600px] h-[auto] z-10" alt="banner-pic" />
       </div>
     </section>
   );
