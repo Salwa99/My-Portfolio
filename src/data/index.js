@@ -17,7 +17,7 @@ export const navBarLinks = [
   {
     _id: 4,
     title: "Projects",
-    link: "prjects",
+    link: "projects",
   },
   {
     _id: 5,

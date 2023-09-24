@@ -2,8 +2,8 @@ import About from "./components/home/About"
 import Contact from "./components/home/Contact"
 import Footer from "./components/home/Footer"
 import NavBar from "./components/home/NavBar"
-import Projects from "./components/home/Projects"
-import Services from "./components/Services/Services"
+import Projects from "./components/projects/Projects"
+import Services from "./components/services/Services"
 import Testemonials from "./components/home/Testemonials"
 
 function App() {
