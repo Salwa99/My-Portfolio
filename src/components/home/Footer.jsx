@@ -13,30 +13,38 @@ const Footer = () => {
           . All Rights Reserved.
         </span>
         <div class="flex gap-4 items-center mt-3 text-2xl font-medium sm:mt-0">
-            <a
-              href="#"
-              class="text-gray-100 hover:text-yellow-500"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="#"
-              class="text-gray-100 hover:text-yellow-500"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="#"
-              class="text-gray-100 hover:text-yellow-500"
-            >
-              <FaMedium />
-            </a>
-            <a
-              href="#"
-              class="text-gray-100 hover:text-yellow-500"
-            >
-              <FaAngellist />
-            </a>
+          <a
+            href="https://github.com/Salwa99"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-100 hover:text-yellow-500"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/salwa-ballouti/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-100 hover:text-yellow-500"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://medium.com/@salwa.ballouti"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-100 hover:text-yellow-500"
+          >
+            <FaMedium />
+          </a>
+          <a
+            href="https://wellfound.com/u/salwa-ballouti"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-100 hover:text-yellow-500"
+          >
+            <FaAngellist />
+          </a>
         </div>
       </div>
     </footer>
