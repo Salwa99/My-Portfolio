@@ -60,9 +60,9 @@ const NavBar = () => {
               <li key={_id}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 md:p-0 text-gray-700 hover:underline text-[1rem]"
+                  className="block py-2 pl-3 pr-4 md:p-0 text-gray-700 hover:underline hover:text-gray-100 text-[1rem]"
                 >
-                 <Link activeClass="active" to={link} spy={true} offset={-70} duration={700}>{title}</Link> 
+                 <Link activeClass="active" to={link} spy={true} offset={-70} duration={1500}>{title}</Link> 
                 </a>
               </li>
             ))}
