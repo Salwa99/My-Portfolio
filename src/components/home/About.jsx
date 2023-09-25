@@ -60,16 +60,40 @@ const About = () => {
           </h2>
           <div className="flex gap-4">
             <span className="icons">
-              <FaGithub />
+              <a
+                href="https://github.com/Salwa99"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
             </span>
             <span className="icons">
-              <FaLinkedin />
+              <a
+                href="https://www.linkedin.com/in/salwa-ballouti/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
             </span>
             <span className="icons">
-              <FaAngellist />
+              <a
+                href="https://wellfound.com/u/salwa-ballouti"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaAngellist />
+              </a>
             </span>
             <span className="icons">
-              <FaMedium />
+              <a
+                href="https://medium.com/@salwa.ballouti"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaMedium />
+              </a>
             </span>
             <button className="btn text-sm lg:text-lg " onClick={openResume}>
               Get my resume
