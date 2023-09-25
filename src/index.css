@@ -8,6 +8,9 @@
     .icons {
         @apply w-12 h-12 lg:w-16 lg:h-16 bg-black bg-opacity-40 text-gray-200 text-xl inline-flex items-center justify-center rounded-md hover:bg-opacity-50 hover:-translate-y-1 transition-all hover:text-yellow-400 border-yellow-500 border-2 shadow-shadowOne cursor-pointer duration-300;
     }
+    .resumeLi {
+    @apply w-full h-20 mt-9 bg-yellow-500 bg-opacity-80 font-bold text-sm lg:text-xl text-gray-600 text-center  flex justify-center items-center  cursor-pointer hover:bg-gray-500 hover:text-white duration-300 border-[3px] border-gray-200 rounded-none;
+         }
 }
 
 .active {

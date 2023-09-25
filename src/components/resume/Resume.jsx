@@ -11,10 +11,10 @@ const Resume = () => {
       </h1>
 
       <div>
-        <ul>
-          <li>Education</li>
-          <li>Professional Skills</li>
-          <li>Experience</li>
+        <ul className="w-full grid grid-cols-3  ">
+          <li className="resumeLi">Education</li>
+          <li className="resumeLi">Professional Skills</li>
+          <li className="resumeLi">Experience</li>
         </ul>
       </div>
     </section>
