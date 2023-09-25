@@ -12,7 +12,16 @@ const Projects = () => {
           My projects
         </h1>
         <h2 className="text-center text-yellow-600 py-6">
-          Check my GitHub for more
+          Check{" "}
+          <a
+            href="https://github.com/Salwa99"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:font-bold"
+          >
+            my GitHub
+          </a>{" "}
+          for more
         </h2>
       </div>
 
