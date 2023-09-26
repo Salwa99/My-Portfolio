@@ -11,6 +11,8 @@
     .resumeLi {
     @apply w-full h-20 mt-9 bg-yellow-500 bg-opacity-80 font-bold text-sm lg:text-xl text-gray-600 text-center  flex justify-center items-center  cursor-pointer hover:bg-gray-500 hover:text-white duration-300 border-[3px] border-gray-200 rounded-none;
          }
+
+    
 }
 
 .active {
