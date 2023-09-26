@@ -54,46 +54,46 @@ const Skills = () => {
         {SkillsA.map((data) => (
           <div key={data._id} className="grid grid-cols-1 p-16">
             <div className="mt-12 grid grid-cols-3 gap-8 text-5xl lg:text-6xl text-gray-500 cursor-pointer">
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.html}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.css}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.javascript}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.react}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.redux}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.typescript}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.webpack}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.jest}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.ruby}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.rubyonrails}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.sql}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.postgres}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.postman}
               </h2>
-              <h2 className="flex items-center justify-center animate-move">
+              <h2 className="flex items-center justify-center hover:text-yellow-400 animate-move">
                 {data.github}
               </h2>
             </div>
