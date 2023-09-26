@@ -11,7 +11,7 @@ import teamwork from '../assets/images/teamwork.png'
 import problemsolving from '../assets/images/problemSolving.png'
 
 
-export const Skills = [
+export const SkillsA = [
   {
     _id: 1,
     html: <AiFillHtml5 />,
