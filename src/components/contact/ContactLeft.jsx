@@ -3,9 +3,9 @@ import contactImg from "../../assets/contactUs.svg";
 
 const ContactLeft = () => {
   return (
-    <div className="w-full lg:w-[35%] bg-gradient-to-r from-[#2a2c30] to-[#5e5e5d] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
+    <div className="bg-gradient-to-r from-[#2a2c30] to-[#5e5e5d] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
       <img
-        className="w-[600px] h-[528px] object-cover rounded-lg m-4"
+        className="object-cover rounded-lg m-4"
         src={contactImg}
         alt="contact image"
       />

@@ -21,20 +21,19 @@ const Contact = () => {
           Contact With Me
         </h1>
       </div>
-      <div className="w-full  p-2 lg:p-10 lg:mt-10">
-        <div className="flex flex-col sm:flex-row gap-4">
+      <div className="w-full p-2 lg:p-10 lg:mt-10">
+        <div className="flex flex-col lg:flex-row gap-4">
           <ContactLeft />
-          <div className="w-full lg:w-[60%] py-10 bg-gradient-to-r from-[#616060] to-[#1e1f22] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
+          <div className="w-full lg:w-2/3 p-4 lg:p-10 bg-gradient-to-r from-[#616060] to-[#1e1f22] flex flex-col gap-8 rounded-lg shadow-shadowOne">
             <form
               onSubmit={handleSubmit}
-              className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5"
+              className="w-full flex flex-col gap-4 lg:gap-6"
             >
-      
-              <div className="w-full flex flex-col lgl:flex-row gap-10">
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
+              
+                <div className="flex flex-col gap-4">
                   <label
                     htmlFor="name"
-                    className="text-sm text-gray-400 uppercase tracking-wide"
+                    className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
                   >
                     Full Name
                   </label>
@@ -44,35 +43,30 @@ const Contact = () => {
                     name="name"
                     onChange={(e) => setUsername(e.target.value)}
                     value={username}
-                    className="outline-designColor"
-             
+                    className="p-4 rounded lg:w-full outline-yellow-400"
                   />
-                  
                 </div>
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
+                <div className="flex flex-col gap-4">
                   <label
-                    htmlFor="number"
-                    className="text-sm text-gray-400 uppercase tracking-wide"
+                    htmlFor="phone"
+                    className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
                   >
                     Phone Number
                   </label>
                   <input
-                    id="number"
-                    type="number"
-                    name="number"
+                    id="phone"
+                    type="text"
+                    name="phone"
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     value={phoneNumber}
-                    className=
-                      "outline-designColor"
-                  
+                    className="p-4 rounded lg:w-full outline-yellow-400"
                   />
-                  
                 </div>
-              </div>
+            
               <div className="flex flex-col gap-4">
                 <label
                   htmlFor="email"
-                  className="text-sm text-gray-400 uppercase tracking-wide"
+                  className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
                 >
                   Email
                 </label>
@@ -82,16 +76,13 @@ const Contact = () => {
                   name="email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  className=
-                    "outline-designColor"
-            
+                  className="p-4 rounded outline-yellow-400"
                 />
-               
               </div>
               <div className="flex flex-col gap-4">
                 <label
                   htmlFor="subject"
-                  className="text-sm text-gray-400 uppercase tracking-wide"
+                  className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
                 >
                   Subject
                 </label>
@@ -101,16 +92,13 @@ const Contact = () => {
                   name="subject"
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
-                  className=
-                    "outline-designColor"
-              
+                  className="p-4 rounded outline-yellow-400"
                 />
-                
               </div>
               <div className="flex flex-col gap-4">
                 <label
                   htmlFor="message"
-                  className="text-sm text-gray-400 uppercase tracking-wide"
+                  className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
                 >
                   Message
                 </label>
@@ -119,19 +107,18 @@ const Contact = () => {
                   name="message"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
-                  className="outline-designColor"
+                  className="p-4 rounded outline-yellow-400"
                   cols="30"
                   rows="8"
                 ></textarea>
               </div>
-              <div className="w-full">
+              <div className="w-full flex items-center justify-center mt-4">
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="w-full h-12 bg-[#141518] rounded-lg text-base
-                  text-gray-400 tracking-wider uppercase hover:text-white
-                  duration-300 hover:border-[1px] hover:border-designColor
-                  border-transparent"
+                  className="h-12 w-full p-6 bg-[#ffffff] rounded-lg text-center flex items-center justify-center
+                  text-gray-600 tracking-wider uppercase hover:text-white hover:bg-yellow-400
+                  duration-300 hover:border-[1px] border-2 border-gray-900"
                 >
                   Submit
                 </button>
