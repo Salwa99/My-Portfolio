@@ -8,8 +8,58 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [errMsg, setErrMsg] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [state, handleSubmit] = useForm("xbjvznoo");
+
+  const handleSend = async (e) => {
+    e.preventDefault();
+
+    // Perform field validation
+    if (!username || !phoneNumber || !email || !subject || !message) {
+      setErrMsg("All fields are required!");
+      return;
+    }
+
+    setErrMsg("");
+    setIsSubmitting(true);
+
+    try {
+      const formData = {
+        name: username,
+        phone: phoneNumber,
+        email,
+        subject,
+        message,
+      };
+
+      const response = await fetch("https://formspree.io/f/xbjvznoo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setErrMsg("");
+        setIsSubmitting(false);
+        setUsername("");
+        setPhoneNumber("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } else {
+        setIsSubmitting(false);
+        setErrMsg("Error sending the message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending the message:", error);
+      setIsSubmitting(false);
+      setErrMsg("Error sending the message. Please try again later.");
+    }
+  };
 
   return (
     <section
@@ -26,43 +76,42 @@ const Contact = () => {
           <ContactLeft />
           <div className="w-full lg:w-2/3 p-4 lg:p-10 bg-gradient-to-r from-[#616060] to-[#1e1f22] flex flex-col gap-8 rounded-lg shadow-shadowOne">
             <form
-              onSubmit={handleSubmit}
+              onSubmit={handleSend}
               className="w-full flex flex-col gap-4 lg:gap-6"
             >
-              
-                <div className="flex flex-col gap-4">
-                  <label
-                    htmlFor="name"
-                    className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    name="name"
-                    onChange={(e) => setUsername(e.target.value)}
-                    value={username}
-                    className="p-4 rounded lg:w-full outline-yellow-400"
-                  />
-                </div>
-                <div className="flex flex-col gap-4">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    id="phone"
-                    type="text"
-                    name="phone"
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    value={phoneNumber}
-                    className="p-4 rounded lg:w-full outline-yellow-400"
-                  />
-                </div>
-            
+              <div className="flex flex-col gap-4">
+                <label
+                  htmlFor="name"
+                  className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
+                >
+                  Full Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  onChange={(e) => setUsername(e.target.value)}
+                  value={username}
+                  className="p-4 rounded lg:w-full outline-yellow-400"
+                />
+              </div>
+              <div className="flex flex-col gap-4">
+                <label
+                  htmlFor="phone"
+                  className="text-sm lg:text-lg text-gray-200 uppercase tracking-wide"
+                >
+                  Phone Number
+                </label>
+                <input
+                  id="phone"
+                  type="text"
+                  name="phone"
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  value={phoneNumber}
+                  className="p-4 rounded lg:w-full outline-yellow-400"
+                />
+              </div>
+
               <div className="flex flex-col gap-4">
                 <label
                   htmlFor="email"
@@ -112,11 +161,23 @@ const Contact = () => {
                   rows="8"
                 ></textarea>
               </div>
+
+              {errMsg && (
+                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-red-500 text-base tracking-wide animate-bounce">
+                  {errMsg}
+                </p>
+              )}
+              {isSubmitting && (
+                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-gray-200 text-base tracking-wide animate-bounce">
+                  Submitting...
+                </p>
+              )}
+
               <div className="w-full flex items-center justify-center mt-4">
                 <button
                   type="submit"
-                  disabled={state.submitting}
-                  className="h-12 w-full p-6 bg-[#ffffff] rounded-lg text-center flex items-center justify-center
+                  disabled={state.submitting || isSubmitting}
+                  className="h-12  p-6 bg-[#ffffff] rounded-lg text-center flex items-center justify-center
                   text-gray-600 tracking-wider uppercase hover:text-white hover:bg-yellow-400
                   duration-300 hover:border-[1px] border-2 border-gray-900"
                 >
