@@ -1,69 +1,44 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@layer components {
+    .icons {
+        @apply w-12 h-12 lg:w-16 lg:h-16 bg-black bg-opacity-40 text-gray-200 text-xl inline-flex items-center justify-center rounded-md hover:bg-opacity-50 hover:-translate-y-1 transition-all hover:text-yellow-400 border-yellow-500 border-2 shadow-shadowOne cursor-pointer duration-300;
+    }
+    .skillsLi {
+    @apply w-full h-20 mt-9 bg-yellow-500 bg-opacity-80 font-bold text-sm lg:text-xl text-gray-600 text-center  flex justify-center items-center  cursor-pointer hover:bg-gray-500 hover:text-white duration-300 border-[3px] border-gray-200 rounded-none;
+         }
+
+    
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.active {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.btn {
+  padding: 5px;
+  color: #61615e;
+  border-radius: 7px;
+  font-weight: bold;
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(83, 83, 4, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+} 
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.btn:hover {
+  border: 1px solid yellow;
+  box-shadow: inset 0 0 20px rgba(255, 251, 5, 0.8), 0 0 20px rgba(58, 58, 51, 0.8);
+  outline-color: rgba(243, 227, 5, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #444443; 
 }
