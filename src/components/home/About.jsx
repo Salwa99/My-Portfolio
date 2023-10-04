@@ -2,6 +2,7 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { FaGithub, FaLinkedin, FaAngellist, FaMedium } from "react-icons/fa";
 import image from "../../assets/19879462_6174096.svg";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [text] = useTypewriter({
@@ -103,7 +104,13 @@ const About = () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex justify-center items-center">
-        <img src={image} className="w-[600px] h-[auto] z-10" alt="banner-pic" />
+        <motion.img
+          initial={false}
+          animate={{ x: 100, x: -100 }}
+          src={image}
+          className="w-[600px] h-[auto] z-10"
+          alt="banner-pic"
+        />
       </div>
     </section>
   );
