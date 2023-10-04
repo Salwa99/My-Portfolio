@@ -12,6 +12,10 @@ const NavBar = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <motion.nav
       initial={false}
@@ -102,6 +106,7 @@ const NavBar = () => {
                     spy={true}
                     offset={-70}
                     duration={1500}
+                    onClick={closeMenu}
                   >
                     {title}
                   </Link>
