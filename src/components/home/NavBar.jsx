@@ -17,7 +17,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="border-gray-200 bg-yellow-400 sticky top-0 z-50 border-b-[1px] border-b-gray-400">
+    <nav className="border-gray-200 bg-[#F2C832] sticky top-0 z-50 border-b-[1px] border-b-gray-400">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center gap-4">
           <img
@@ -75,7 +75,7 @@ const NavBar = () => {
               <li key={_id}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 md:p-0 text-gray-700 hover:underline hover:text-gray-100 text-[1rem]"
+                  className="block py-2 pl-3 pr-4 md:p-0 text-[#313131] hover:underline hover:text-gray-100 text-[1rem]"
                 >
                   <Link
                     activeClass="active"
