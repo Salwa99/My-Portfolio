@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = ({ icon, title, desc }) => {
   return (
-    <div className="w-full h-82 px-12 py-10 shadow-shadowOne rounded-lg flex items-center bg-[#000026] group hover:transform hover:-translate-y-2 hover:transition-transform ease-in-out hover:duration-500">
+    <div className="px-5 py-8 shadow-shadowOne rounded-lg flex items-center bg-[#000026] group hover:transform hover:-translate-y-2 hover:transition-transform ease-in-out hover:duration-500">
       <div className="flex flex-col gap-8">
         <div>
           <span className="text-6xl text-yellow-500 pl-10">{icon}</span>
