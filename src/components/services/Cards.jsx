@@ -14,9 +14,6 @@ const Cards = ({ icon, title, desc }) => {
             {title}
           </h2>
           <p className="text-base">{desc}</p>
-          <span className="text-2xl text-yellow-500">
-            <HiArrowRight />
-          </span>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const About = () => {
 
    const openResume = () => {
      window.open(
-       "https://drive.google.com/file/d/1HTvmlZHjhURkVf9MzYfQutBmpWtGfJQB/view?usp=drive_link",
+       "https://drive.google.com/file/d/1HTvmlZHjhURkVf9MzYfQutBmpWtGfJQB/view?usp=sharing",
        "_blank"
      );
    };
@@ -104,9 +104,7 @@ const About = () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex justify-center items-center">
-        <motion.img
-          initial={false}
-          animate={{ x: 100, x: -100 }}
+        <img
           src={image}
           className="w-[600px] h-[auto] z-10"
           alt="banner-pic"

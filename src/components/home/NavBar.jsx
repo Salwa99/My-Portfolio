@@ -106,7 +106,7 @@ const NavBar = () => {
                     spy={true}
                     offset={-70}
                     duration={1500}
-                    onClick={closeMenu}
+                    onClick={closeMenu} // Close menu when a menu item is clicked
                   >
                     {title}
                   </Link>
