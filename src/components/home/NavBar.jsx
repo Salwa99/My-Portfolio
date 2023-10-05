@@ -17,11 +17,7 @@ const NavBar = () => {
   };
 
   return (
-    <motion.nav
-      initial={false}
-      animate={isMenuOpen ? "open" : "closed"}
-      className="border-gray-200 bg-yellow-400 sticky top-0 z-50 border-b-[1px] border-b-gray-400"
-    >
+    <nav className="border-gray-200 bg-yellow-400 sticky top-0 z-50 border-b-[1px] border-b-gray-400">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center gap-4">
           <img
@@ -74,28 +70,9 @@ const NavBar = () => {
           } w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <motion.ul
-            variants={{
-              open: {
-                opacity: 1,
-                y: 0,
-                transition: { type: "spring", stiffness: 300, damping: 24 },
-              },
-              closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
-            }}
-          >
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0">
             {navBarLinks.map(({ _id, title, link }) => (
-              <motion.li
-                key={_id}
-                variants={{
-                  open: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { type: "spring", stiffness: 300, damping: 24 },
-                  },
-                  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
-                }}
-              >
+              <li key={_id}>
                 <a
                   href="#"
                   className="block py-2 pl-3 pr-4 md:p-0 text-gray-700 hover:underline hover:text-gray-100 text-[1rem]"
@@ -106,17 +83,17 @@ const NavBar = () => {
                     spy={true}
                     offset={-70}
                     duration={1500}
-                    onClick={closeMenu} // Close menu when a menu item is clicked
+                    onClick={closeMenu}
                   >
                     {title}
                   </Link>
                 </a>
-              </motion.li>
+              </li>
             ))}
-          </motion.ul>
+          </ul>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
