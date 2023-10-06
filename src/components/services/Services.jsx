@@ -53,7 +53,7 @@ const Services = () => {
   ];
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 60 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
