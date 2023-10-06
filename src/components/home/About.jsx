@@ -34,6 +34,15 @@ const About = () => {
         duration: 0.2,
       },
     },
+    hover: { scale: 1.1 },
+  };
+
+  const imageVariants = {
+    visible: {
+      y: [0, 10, 0],
+      opacity: 1,
+      transition: { repeat: Infinity, duration: 3 },
+    },
   };
 
   return (
@@ -87,7 +96,11 @@ const About = () => {
               },
             }}
           >
-            <motion.span className="icons" variants={iconVariants}>
+            <motion.span
+              className="icons"
+              variants={iconVariants}
+              whileHover="hover"
+            >
               <a
                 href="https://github.com/Salwa99"
                 target="_blank"
@@ -96,7 +109,11 @@ const About = () => {
                 <FaGithub />
               </a>
             </motion.span>
-            <motion.span className="icons" variants={iconVariants}>
+            <motion.span
+              className="icons"
+              variants={iconVariants}
+              whileHover="hover"
+            >
               <a
                 href="https://www.linkedin.com/in/salwa-ballouti/"
                 target="_blank"
@@ -105,7 +122,11 @@ const About = () => {
                 <FaLinkedin />
               </a>
             </motion.span>
-            <motion.span className="icons" variants={iconVariants}>
+            <motion.span
+              className="icons"
+              variants={iconVariants}
+              whileHover="hover"
+            >
               <a
                 href="https://wellfound.com/u/salwa-ballouti"
                 target="_blank"
@@ -114,7 +135,11 @@ const About = () => {
                 <FaAngellist />
               </a>
             </motion.span>
-            <motion.span className="icons" variants={iconVariants}>
+            <motion.span
+              className="icons"
+              variants={iconVariants}
+              whileHover="hover"
+            >
               <a
                 href="https://medium.com/@salwa.ballouti"
                 target="_blank"
@@ -127,6 +152,7 @@ const About = () => {
               className="btn text-sm lg:text-lg "
               onClick={openResume}
               variants={iconVariants}
+              whileHover="hover"
             >
               Get my resume
             </motion.button>
@@ -136,9 +162,9 @@ const About = () => {
 
       <div className="w-full lg:w-1/2 flex justify-center items-center">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 5 }}
+          initial="hidden"
+          animate="visible"
+          variants={imageVariants}
         >
           <img
             src={image}

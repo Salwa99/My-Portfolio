@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import motion from Framer Motion
+import { motion } from "framer-motion";
 import contactImg from "../../assets/contactUs.svg";
 
 const ContactLeft = () => {
@@ -9,7 +9,7 @@ const ContactLeft = () => {
         className="object-cover rounded-lg m-8"
         animate={{
           y: [0, 10, 0],
-          transition: { repeat: Infinity, duration: 2 },
+          transition: { repeat: Infinity, duration: 3 },
         }}
       >
         <img src={contactImg} alt="contact image" />
