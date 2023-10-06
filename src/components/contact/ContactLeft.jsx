@@ -1,16 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 import contactImg from "../../assets/contactUs.svg";
 
 const ContactLeft = () => {
   return (
-    <div className="bg-gradient-to-r from-[#2a2c30] to-[#5e5e5d] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
-      <img
+    <div className="bg-[#000026] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
+      <motion.div
         className="object-cover rounded-lg m-8"
-        src={contactImg}
-        alt="contact image"
-      />
+        animate={{
+          y: [0, 10, 0],
+          transition: { repeat: Infinity, duration: 3 },
+        }}
+      >
+        <img src={contactImg} alt="contact image" />
+      </motion.div>
       <div className="flex flex-col gap-4 p-4">
-        <h3 className="text-3xl font-bold text-white">Salwa Ballouti</h3>
+        <h3 className="text-3xl font-bold text-gray-200">Salwa Ballouti</h3>
         <p className="text-lg font-normal text-gray-100">
           Full-Stack Web Developer
         </p>

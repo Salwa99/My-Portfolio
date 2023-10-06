@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { FaWindowClose } from "react-icons/fa";
 import picture from "../../assets/images/pic.jpeg";
 import { navBarLinks } from "../../data/index";
@@ -11,8 +12,12 @@ const NavBar = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <nav className="border-gray-200 bg-yellow-400 sticky top-0 z-50 border-b-[1px] border-b-gray-400">
+    <nav className="shadow-shadowNavBar bg-[#F2C832] sticky top-0 z-50 border-b-[1px]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center gap-4">
           <img
@@ -35,21 +40,28 @@ const NavBar = () => {
           {isMenuOpen ? (
             <FaWindowClose className="w-10 h-10 text-gray-800" />
           ) : (
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
+            <motion.div
+              variants={{
+                open: { rotate: -45 },
+                closed: { rotate: 0 },
+              }}
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </motion.div>
           )}
         </button>
         <div
@@ -63,7 +75,7 @@ const NavBar = () => {
               <li key={_id}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 md:p-0 text-gray-700 hover:underline hover:text-gray-100 text-[1rem]"
+                  className="block py-2 pl-3 pr-4 md:p-0 text-[#313131] hover:underline hover:text-gray-100 text-[1rem]"
                 >
                   <Link
                     activeClass="active"
@@ -71,6 +83,7 @@ const NavBar = () => {
                     spy={true}
                     offset={-70}
                     duration={1500}
+                    onClick={closeMenu}
                   >
                     {title}
                   </Link>

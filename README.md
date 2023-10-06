@@ -29,6 +29,7 @@ Welcome to my portfolio – a showcase of my journey in web development. Explore
 
 - [React.js](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Framer-motion](https://www.framer.com/motion/)
 - [Formspree](https://formspree.io/) for form submissions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
