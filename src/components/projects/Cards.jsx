@@ -1,9 +1,21 @@
-import React from "react";
-import { AiFillGithub } from "react-icons/ai";
-import { GoLinkExternal } from "react-icons/go";
+import React, { useState } from "react";
 import { ProjectsData } from "../../data/projectsData";
+import Modal from "./Modal";
 
 const Cards = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -20,19 +32,15 @@ const Cards = () => {
                 {data.title}
                 <span className="absolute top-1/2 right-0 transform -translate-y-1/2 w-8 h-5 bg-no-repeat bg-top"></span>
               </h2>
-              <p className="text-sm text-gray-100 mb-4">{data.description}</p>
-              <h3 className="text-4xl flex gap-4 uppercase text-gray-300 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <a href={data.live} target="_blank" rel="noopener noreferrer">
-                  <GoLinkExternal />
-                </a>{" "}
-                <a href={data.repo} target="_blank" rel="noopener noreferrer">
-                  <AiFillGithub />
-                </a>
+
+              <h3 className="p-3 w-[150px] font-bold uppercase text-yellow-600 border-2 border-gray-300 rounded-md cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button onClick={() => openModal(data)}>See My Project</button>
               </h3>
             </div>
           </div>
         ))}
       </div>
+      <Modal isOpen={modalOpen} onClose={closeModal} project={selectedProject} />
     </div>
   );
 };

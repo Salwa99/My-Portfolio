@@ -17,7 +17,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="border-gray-200 bg-[#F2C832] sticky top-0 z-50 border-b-[1px] border-b-gray-400">
+    <nav className="shadow-shadowNavBar bg-[#F2C832] sticky top-0 z-50 border-b-[1px]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center gap-4">
           <img

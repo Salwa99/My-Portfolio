@@ -66,7 +66,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full h-auto lg:h-[1200px] py-20 lg:pl-32 pl-3 flex-col border-b-2 border-yellow-400"
+      className="w-full h-auto lg:h-[1200px] py-20 lg:pl-32 pl-3 flex-col shadow-shadowNavBar"
     >
       <div className="flex flex-col mb-14 gap-4 font-titleFont">
         <h3 className="text-lg uppercase font-bold text-yellow-500 tracking-wide">
@@ -79,10 +79,7 @@ const Services = () => {
 
       <div className="grid grid-rows-3 lg:grid-cols-3 md:grid-cols-2 gap-8 pr-3 lg:pr-20">
         {cards.map((card, index) => (
-          <div
-            key={index}
-            ref={ref}
-          >
+          <div key={index} ref={ref}>
             <motion.div
               variants={cardVariants}
               initial="hidden"

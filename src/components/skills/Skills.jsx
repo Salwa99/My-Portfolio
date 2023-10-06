@@ -44,7 +44,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full py-20 lg:pl-32 pl-3 pr-4 font-titleFont border-b-2 border-yellow-400"
+      className="w-full py-20 lg:pl-32 pl-3 pr-4 font-titleFont shadow-shadowNavBar"
     >
       <h1 className="text-3xl text-center sm:text-5xl text-gray-600 font-bold capitalize">
         Technologies I use

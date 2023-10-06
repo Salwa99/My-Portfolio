@@ -39,7 +39,7 @@ const About = () => {
   return (
     <section
       id="aboutMe"
-      className="w-full flex flex-col lg:flex-row gap-10 py-20 lg:pl-32 pl-3 pr-4 font-titleFont border-b-2 border-yellow-400"
+      className="w-full flex flex-col lg:flex-row gap-10 py-20 lg:pl-32 pl-3 pr-4 font-titleFont shadow-shadowNavBar"
     >
       <div className="w-full lg:w-1/2 flex flex-col gap-10">
         <div className="flex flex-col gap-5">

@@ -3,14 +3,14 @@ import contactImg from "../../assets/contactUs.svg";
 
 const ContactLeft = () => {
   return (
-    <div className="bg-gradient-to-r from-[#2a2c30] to-[#5e5e5d] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
+    <div className="bg-[#000026] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
       <img
         className="object-cover rounded-lg m-8"
         src={contactImg}
         alt="contact image"
       />
       <div className="flex flex-col gap-4 p-4">
-        <h3 className="text-3xl font-bold text-white">Salwa Ballouti</h3>
+        <h3 className="text-3xl font-bold text-gray-200">Salwa Ballouti</h3>
         <p className="text-lg font-normal text-gray-100">
           Full-Stack Web Developer
         </p>
