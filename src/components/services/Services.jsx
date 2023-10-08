@@ -1,24 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Cards from "./Cards";
 import { MdDeveloperMode, MdScreenshotMonitor } from "react-icons/md";
 import { BsFillDatabaseFill } from "react-icons/bs";
 import { AiOutlineCloudServer, AiTwotoneApi } from "react-icons/ai";
 import { VscDebugConsole } from "react-icons/vsc";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Services = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [inView, controls]);
-
   const cards = [
     {
       icon: <MdDeveloperMode />,
@@ -53,10 +41,9 @@ const Services = () => {
   ];
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
+    hover: {
+      rotate: -3,
+      scale: 1.08, 
       transition: {
         duration: 0.5,
       },
@@ -79,12 +66,8 @@ const Services = () => {
 
       <div className="grid grid-rows-3 lg:grid-cols-3 md:grid-cols-2 gap-8 pr-3 lg:pr-20">
         {cards.map((card, index) => (
-          <div key={index} ref={ref}>
-            <motion.div
-              variants={cardVariants}
-              initial="hidden"
-              animate={controls}
-            >
+          <div key={index}>
+            <motion.div whileHover="hover" variants={cardVariants}>
               <Cards icon={card.icon} title={card.title} desc={card.desc} />
             </motion.div>
           </div>
