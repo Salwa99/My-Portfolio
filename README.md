@@ -43,6 +43,8 @@ Welcome to my portfolio – a showcase of my journey in web development. Explore
 - Contact form for reaching out to me.
   
 - Responsive design for various screen sizes.
+
+- Animation with framer-motion.
   
 - Integration with Formspree for form submissions.
   

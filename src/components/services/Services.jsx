@@ -44,6 +44,7 @@ const Services = () => {
     hover: {
       scale: 1.08, 
       transition: {
+        x:15,
         duration: 0.5,
       },
     },
