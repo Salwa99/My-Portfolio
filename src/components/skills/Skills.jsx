@@ -52,7 +52,7 @@ const Skills = () => {
 
       <div>
         {SkillsA.map((data) => (
-          <div key={data._id} className="grid grid-cols-1 p-16">
+          <div key={data._id} className="grid grid-cols-1 p-6 lg:p-16">
             <div className="mt-12 grid grid-cols-3 gap-8 text-5xl lg:text-6xl text-gray-500 cursor-pointer">
               <h2
                 className="flex items-center justify-center hover:text-yellow-400 animate-move"

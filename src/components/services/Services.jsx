@@ -42,7 +42,6 @@ const Services = () => {
 
   const cardVariants = {
     hover: {
-      rotate: -3,
       scale: 1.08, 
       transition: {
         duration: 0.5,
